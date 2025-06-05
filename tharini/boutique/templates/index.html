@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<style>
+    body {
+        background-color: black;
+    }
+    .container {
+        margin-top: 50px;
+        padding: 20px;
+        background-color: black;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px white;
+    }
+    .sidebar {
+      position: fixed;
+      top: 10%;
+      left: 0;
+      height: 100vh;
+      width: 100px;
+      background-color: #333;
+      overflow-x: hidden;
+      transition: width 0.3s;
+      border-radius: 8px;
+      box-shadow: 0 5px 10px rebeccapurple;
+    }
+    .sidebar:hover {
+      width: 200px;
+    }
+    .sidebar a {
+      display: flex;
+      text-align: left;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 25px;
+      white-space: nowrap;
+      font-family: "Brush Script MT", cursive;
+    }
+
+    .sidebar a:hover {
+        font-size: 30px;
+      text-shadow: rebeccapurple 0 5px 5px;
+    }
+
+    .sidebar i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .content {
+      margin-left: 100px;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    .sidebar:hover ~ .content {
+      margin-left: 200px;
+    }
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      padding: 12px;
+      justify-content: space-around;
+      font-family: "Brush Script MT", cursive;
+      box-shadow: 0 5px 10px rebeccapurple;
+      border-radius: 8px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: auto;
+      display: block;
+      font-size: 25px;
+      text-align: center;
+    }
+    .navbar div {
+      width: 400px;
+    }
+
+    .navbar a:hover {
+      font-size: 30px;
+      text-shadow: rebeccapurple 0 5px 5px;
+      border-radius: 4px;
+      transition-duration: 100ms;
+    }
+    .button-container {
+      display: block;
+      width: 600px;
+      padding: 20px;
+      background-color: black;
+      color: white;
+      text-align: left;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: "Brush Script MT", cursive;
+      font-size: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button-container:hover {
+      background-color: gray;
+    }
+    h1 {
+        color: white;
+    }
+    h2 {
+        color: white;
+    }
+    p {
+        color: white;
+    }
+    a {
+        text-decoration: none;
+        color: #007bff;
+    }
+      .cursive-text {
+      font-family: "Brush Script MT", cursive;
+      font-size: 30px;
+    }
+</style>
+<title>Tharini's Boutique</title>
+<body>
+    <nav class="navbar">
+        <div>
+            <a href="/">Home</a>
+        </div>
+        <div>
+            <a href="#">About</a>
+        </div>
+        <div>
+            <a href="#">Services</a>
+        </div>
+        <div>
+            <a href="#">Contact</a>
+        </div>
+        
+  </nav>
+<div class="sidebar">
+    <a href="/"><i class="fas fa-home"></i>Home</a>
+</div>
+
+{%block content%}
+<div class="content">
+        <h1 class="cursive-text" style=" font-size: 40px;">Welcome to Tharini's Boutique</h1>
+
+    <p class="cursive-text">Explore our collection of unique and stylish clothing.</p>
+    <p class="cursive-text">We have the latest collection from renowned fashion brands.</p>
+    <div class="container">
+        <h2 class="cursive-text">Explore now</h2>
+        <div style="display: flex; flex-wrap: wrap;">
+            <a href="category/men" class="button-container" style="box-shadow: 0 2px 10px deepskyblue;">Men's Collection</a>
+        </div>
+        <h1>    </h1>
+       <div style="display: flex; flex-wrap: wrap;">
+            <a href="category/women" class="button-container" style="box-shadow: 0 2px 10px palevioletred;">Women's Collection</a>
+        </div>
+        <h1>    </h1>
+       <div style="display: flex; flex-wrap: wrap;">
+            <a href="category/kids" class="button-container" style="box-shadow: 0 2px 10px yellow;">Kids' Collection</a>
+        </div>
+        <h1>    </h1>
+        <div style="display: flex; flex-wrap: wrap;">
+            <a href="category/accessory" class="button-container" style="box-shadow: 0 2px 10px burlywood;">Accessories</a>
+        </div>
+</div>
+</div>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,14 @@
+{% extends 'shelf.html'%}
+{% block title %}
+<title>Book-{{ book.title }}</title>
+{% endblock %}
+
+{% block content %} 
+<div class="container" style="margin-top: 50px;">
+    <h1>{{book.title}}</h1>
+    <p>Written by {{book.author}} in {{book.language}}</p>
+</div>
+<div style="margin: 20px;">
+    <a href="/shelf/{{shelf.shelf_number}}">Back to Shelf</a>
+</div>
+{% endblock %}

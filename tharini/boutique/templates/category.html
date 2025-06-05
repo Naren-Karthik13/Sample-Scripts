@@ -1,0 +1,17 @@
+{%extends 'index.html'%}
+{% block content %}
+<title>{{ collection.category }}</title>
+<body>
+    <h1 class="cursive-text" style="text-align: left; font-size: 40px;">{{ collection.category }}</h1>
+    <p class="cursive-text">Explore our collection of unique and stylish clothing for {{collection.category}}.</p>
+    <div class="container">
+        <h2 class="cursive-text">Explore now</h2>
+        <div style="display: flex; flex-wrap: wrap;">
+            {% for i in item %}
+            <p class="button-container" style="box-shadow: 0 2px 10px deepskyblue;">
+                <a href="{{ item.get_absolute_url }}">{{ i.name }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+{% endblock %}

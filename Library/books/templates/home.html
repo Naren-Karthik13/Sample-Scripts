@@ -1,0 +1,33 @@
+<title>Library</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        color: #666;
+    }
+    a {
+        text-decoration: none;
+        color: #007BFF;
+    }
+</style>
+<body>
+    <div class="container"; style="margin-top: 50px;">
+        <h1>Welcome to the Library</h1>
+        <p>List of shelves</p>
+        <div class="shelf-list" style="margin: auto;">
+            <ul>
+            {% for shelf in shelves %}
+                <a href='shelf/{{shelf.shelf_number}}'>Shelf-{{ shelf.shelf_number }}</a>
+            {% endfor %}
+        </ul>
+        </div>
+        
+    </div>
+</body>
