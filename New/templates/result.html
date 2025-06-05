@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 0.5rem 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 1.5rem;
+            text-decoration: none;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Thank You!</h2>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <a href="/">← Back to form</a>
+    </div>
+</body>
+</html>
